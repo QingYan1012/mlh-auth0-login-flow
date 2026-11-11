@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auth0 Login Flow Demo — MLH Builders Week</title>
+  <!-- Auth0 SPA SDK (official CDN, as in Auth0's SPA quickstart) -->
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1.5rem; color: #1a1a2e; }
+    h1 { font-size: 1.6rem; }
+    button { font-size: 1rem; padding: 0.6rem 1.4rem; border: 0; border-radius: 8px; background: #635dff; color: #fff; cursor: pointer; }
+    button.secondary { background: #e5e5ef; color: #1a1a2e; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    #warning { display: none; background: #fff3cd; border: 1px solid #ffc107; padding: 0.8rem 1rem; border-radius: 8px; margin: 1rem 0; }
+    #profile { display: none; margin-top: 1.5rem; }
+    #profile img { border-radius: 50%; width: 72px; height: 72px; }
+    pre { background: #f4f4f8; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; }
+    #status { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Auth0 Login Flow Demo</h1>
+  <p id="status">Loading…</p>
+
+  <div id="warning">
+    ⚠️ <strong>Client ID not set.</strong> Open <code>public/app.js</code> and replace
+    <code>AUTH0_CLIENT_ID</code> with your Auth0 application's Client ID (see README).
+  </div>
+
+  <button id="btn-login" disabled>Log in with Auth0</button>
+  <button id="btn-logout" class="secondary" disabled>Log out</button>
+
+  <div id="profile">
+    <img id="avatar" alt="avatar" />
+    <h2 id="nickname"></h2>
+    <p id="email"></p>
+    <pre id="profile-json"></pre>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
